@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@Table(name = "Country")
+@NamedQuery(name = "Country.findOneByCountry", query = "FROM Country where country= ?1")
 @NoArgsConstructor
 @Getter
 @Setter
@@ -22,7 +24,7 @@ public class Country implements Serializable
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(length = 50, unique = true, nullable = false)
+    @Column(length = 255, unique = true, nullable = false, name = "COUNTRY")
     private String country;
 
     @Override
