@@ -3,9 +3,7 @@ package com.pradeep.Country.Controller;
 import com.pradeep.Country.Service.CountryService;
 import com.pradeep.Country.domain.Country;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CountryController
@@ -25,6 +23,12 @@ public class CountryController
         Country ctry = ctryService.getCountry(country);
 
         return "I might have implemented "+ctry.getCountry();
+    }
+
+    @PostMapping("create")
+    public Country createBook(@RequestBody Country ctry)
+    {
+        return ctryService.createCountry(ctry);
     }
 
 }
