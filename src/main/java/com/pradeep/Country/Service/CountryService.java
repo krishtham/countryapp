@@ -19,5 +19,10 @@ public class CountryService
         return ctry;
     }
 
+    public Country createCountry(Country ctry)
+    {
+        return ctryRepository.save(ctry);
+    }
+
 
 }
