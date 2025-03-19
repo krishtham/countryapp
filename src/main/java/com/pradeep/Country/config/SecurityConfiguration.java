@@ -11,10 +11,10 @@ public class SecurityConfiguration {
 
     private static final AntPathRequestMatcher[] WHITE_LIST_URLS = {
             new AntPathRequestMatcher("/register"),
-            new AntPathRequestMatcher("/api/v1/getUsers"),
-            new AntPathRequestMatcher("/h2-console/**"),
-            new AntPathRequestMatcher("/capital/**"),
-            new AntPathRequestMatcher("/login/**")
+            new AntPathRequestMatcher("/api/v1/getUsers")
+            //new AntPathRequestMatcher("/h2-console/**"),
+            // new AntPathRequestMatcher("/capital/**"),
+            //new AntPathRequestMatcher("/login/**")
     };
 
     @Bean
